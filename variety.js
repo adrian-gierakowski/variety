@@ -345,7 +345,7 @@ Released by Maypop Inc, © 2012-2018, under the MIT License. */
   var cursor = db.getCollection(config.collection).find(config.query).sort(config.sort).limit(config.limit);
   var interimResults = cursor.reduce(reduceDocuments, {});
   var varietyResults = convertResults(interimResults, cursor.size())
-  .filter(filter)
+  // .filter(filter)
   .sort(comparator);
 
   if(config.persistResults) {
